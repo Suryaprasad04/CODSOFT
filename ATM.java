@@ -39,7 +39,7 @@ import java.util.Scanner;
         public ATM(BankAcc account) {
             this.account = account;
             scanner = new Scanner(System.in);
-            scanner.close();
+        
         }
 
         public void displayMenu() {
@@ -51,7 +51,7 @@ import java.util.Scanner;
                 System.out.println("2. Deposit");
                 System.out.println("3. Withdraw");
                 System.out.println("4. Exit");
-                            scanner.close();
+                        
 
             
         }
@@ -84,7 +84,7 @@ import java.util.Scanner;
             System.out.print("Enter deposit amount: ");
             double amount = scanner.nextDouble();
             account.deposit(amount);
-                        scanner.close();
+            
 
         }
 
@@ -93,7 +93,7 @@ import java.util.Scanner;
             double amount = scanner.nextDouble();
             if (account.withdraw(amount)) {
                 System.out.println("Please take your cash.");
-                            scanner.close();
+            
 
             }
         }
@@ -108,7 +108,7 @@ import java.util.Scanner;
                 System.out.print("Enter your choice: ");
                 int choice = scanner.nextInt();
                 atm.process(choice);
-                            scanner.close();
+                            
 
             }
         }
